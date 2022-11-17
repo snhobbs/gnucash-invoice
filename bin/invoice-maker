@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+import click, os, sys, shutil
+from time import sleep
+from datetime import datetime
+from InvoiceMaker import LatexInvoice
+@click.group()
+def gr1():
+    pass
+
+@click.option('--invoice', '-i', required=True, type=str, help='Invoice Name')
+@gr1.command()
+def make(invoice):
+    pass
+
+if __name__ == "__main__":
+    try:
+        gr1()
+    except Exception as e:
+        raise
